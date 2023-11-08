@@ -1,9 +1,9 @@
-import { apiURL } from 'apis/convertURI';
+import { baseURL } from 'apis/convertURI';
 import axios from 'axios';
 import { loginDatahandlers } from 'utils/loginDatahandlers';
 
 const instance = axios.create({
-  baseURL: apiURL,
+  baseURL: `${baseURL}/api`,
   headers: {
     'Content-Type': 'application/json',
   },

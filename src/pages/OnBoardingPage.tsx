@@ -1,8 +1,8 @@
-import React from 'react';
-import LoginOrSignup from 'components/LoginSignUpButton/LoginOrSignup';
+import { getTest } from 'apis/text';
 import FlexContainer from 'components/@commons/FlexContainer';
-import PageContainer from '../components/@commons/PageContainer';
 import LogoPicture from 'components/@commons/LogoPicture';
+import LoginOrSignup from 'components/LoginSignUpButton/LoginOrSignup';
+import PageContainer from '../components/@commons/PageContainer';
 
 const OnBoardingPage = (): JSX.Element => {
   return (
@@ -10,6 +10,7 @@ const OnBoardingPage = (): JSX.Element => {
       <FlexContainer $wFull $maxWidth="480px" $align="center" $gap="60px">
         <LogoPicture width="65%" />
         <LoginOrSignup />
+        <button onClick={() => getTest()}>요청테스트</button>
       </FlexContainer>
     </PageContainer>
   );
