@@ -11,7 +11,7 @@ const useLogin = (redirectPage?: string) => {
 
   const loginBtnHandler = (): void => {
     sessionStorage.setItem('beforeLoginURL', redirectPage || '/');
-    const redirectURI = baseURL + '/login/kakao';
+    const redirectURI = baseURL + '/api/login/kakao';
     console.log(redirectURI);
     location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_API_KEY}&redirect_uri=${redirectURI}&response_type=code`;
   };
